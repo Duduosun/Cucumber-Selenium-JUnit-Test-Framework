@@ -30,32 +30,33 @@ public abstract class AbstractPage {
         return navigation;
     }
 
-    protected By getBy(int type, String name) {
+    protected By getBy(int type, String locator) {
         By result;
+        String name = propertiesManager.get(locator);
         switch (type) {
             case BY_CLASS_NAME:
-                result = By.className(propertiesManager.get(name));
+                result = By.className(name);
                 break;
             case BY_CSS_SELECTOR:
-                result = By.cssSelector(propertiesManager.get(name));
+                result = By.cssSelector(name);
                 break;
             case BY_ID:
-                result = By.id(propertiesManager.get(name));
+                result = By.id(name);
                 break;
             case BY_LINK_TEXT:
-                result = By.linkText(propertiesManager.get(name));
+                result = By.linkText(name);
                 break;
             case BY_NAME:
-                result = By.name(propertiesManager.get(name));
+                result = By.name(name);
                 break;
             case BY_PARTIAL_LINK_TEXT:
-                result = By.partialLinkText(propertiesManager.get(name));
+                result = By.partialLinkText(name);
                 break;
             case BY_TAG_NAME:
-                result = By.tagName(propertiesManager.get(name));
+                result = By.tagName(name);
                 break;
             case BY_XPATH:
-                result = By.xpath(propertiesManager.get(name));
+                result = By.xpath(name);
                 break;
             default:
                 throw new IllegalArgumentException("By type " + type + " is not found.");
