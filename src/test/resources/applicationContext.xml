@@ -18,4 +18,11 @@
           class="org.openqa.selenium.WebDriver"
           factory-bean="driverProvider"
           factory-method="getDriver"/>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <value>locators/locators</value>
+        </property>
+    </bean>
+
 </beans>
