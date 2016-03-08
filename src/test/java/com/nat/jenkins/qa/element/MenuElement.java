@@ -16,7 +16,7 @@ public class MenuElement extends PageElement {
     /**
      * Click the specified menu item.
      *
-     * @param itemName
+     * @param itemName - text of the item
      */
     public void clickMenuItem(String itemName) {
         wrapper.findElement(By.xpath("//*[text()='" + itemName + "']")).click();

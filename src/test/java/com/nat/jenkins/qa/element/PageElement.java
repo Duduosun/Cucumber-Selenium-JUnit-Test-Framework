@@ -23,7 +23,7 @@ public class PageElement {
     /**
      * Returns the text of this element.
      *
-     * @return
+     * @return text of the element.
      */
     public String getText() {
         return element.getText();
@@ -40,7 +40,7 @@ public class PageElement {
     /**
      * Returns if this element is visible or not.
      *
-     * @return
+     * @return true if this element is visible.
      */
     public boolean isVisible() {
         return element.isDisplayed();
@@ -52,7 +52,7 @@ public class PageElement {
      *
      * @param container
      * @param locator
-     * @return
+     * @return true if some element(s) can be found by the specified locator in the container
      */
     public boolean isElementPresents(WebElement container, By locator) {
         return container.findElements(locator).size() > 0;
@@ -63,7 +63,7 @@ public class PageElement {
      * Returns the value for the specified attribute.
      *
      * @param attributeName
-     * @return
+     * @return the value for the specified attribute.
      */
     public String getAttribute(String attributeName) {
         return element.getAttribute(attributeName);
@@ -72,7 +72,7 @@ public class PageElement {
     /**
      * Returns the native web element for this page element.
      *
-     * @return
+     * @return the native web element.
      */
     public WebElement getWebElement() {
         return this.element;

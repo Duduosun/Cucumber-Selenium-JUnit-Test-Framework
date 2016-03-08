@@ -13,7 +13,7 @@ public class TextAreaElement extends PageElement {
     /**
      * Sets text for this element.
      *
-     * @param text
+     * @param text text to enter
      */
     public void enterText(String text) {
         if (text != null) {
@@ -24,8 +24,6 @@ public class TextAreaElement extends PageElement {
 
     /**
      * Sends a specific key action to the element.
-     *
-     * @param keys
      */
     public void sendKey(Keys keys) {
         this.element.sendKeys(keys);

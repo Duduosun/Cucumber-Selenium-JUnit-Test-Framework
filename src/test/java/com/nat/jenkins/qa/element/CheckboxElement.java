@@ -35,7 +35,7 @@ public class CheckboxElement extends PageElement {
     /**
      * Returns whether or not checkbox is selected.
      *
-     * @return
+     * @return true if checkbox is selected.
      */
     public Boolean isChecked() {
         return element.isSelected();

@@ -17,7 +17,7 @@ public class RadioElement extends PageElement {
     /**
      * Sets specified value for the group of radio buttons
      *
-     * @param value
+     * @param value value that need to be checked
      */
     public void setValue(String value) {
         logger.debug("Set value " + value);
